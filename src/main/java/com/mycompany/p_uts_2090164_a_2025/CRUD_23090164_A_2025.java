@@ -49,7 +49,7 @@ public class CRUD_23090164_A_2025 {
             Updates.set("usia", 26)                 // Update: ubah field usia menjadi 26
         );
 
-        //Menghapus dokumen dari koleksi
+        // Menghapus dokumen dari koleksi
         // Misalnya hapus dokumen dengan nama "Idris"
         // ============================
         collection.deleteOne(Filters.eq("nama", "Idris")); // Menghapus satu dokumen dengan nama "Idris"
