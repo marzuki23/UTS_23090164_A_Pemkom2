@@ -42,7 +42,7 @@ public class CRUD_23090164_A_2025 {
         }
 
         //Mengubah isi data (value) pada dokumen
-        // Misalnya ubah usia Andi menjadi 25
+        // Misalnya ubah usia Agung menjadi 26
         // ============================
         collection.updateOne(
             Filters.eq("nama", "Agung"),             // Filter: cari dokumen dengan nama Agung
