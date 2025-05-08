@@ -35,33 +35,33 @@ public class CRUD_23090164_A_2025 {
 
         //Menampilkan seluruh data yang tersimpan di koleksi
         // ============================
-//        System.out.println("=== Seluruh Data ===");
-//        FindIterable<Document> semuaDokumen = collection.find(); // Mengambil semua dokumen
-//        for (Document doc : semuaDokumen) {
-//            System.out.println(doc.toJson()); // Menampilkan isi dokumen dalam format JSON
-//        }
+        System.out.println("=== Seluruh Data ===");
+        FindIterable<Document> semuaDokumen = collection.find(); // Mengambil semua dokumen
+        for (Document doc : semuaDokumen) {
+            System.out.println(doc.toJson()); // Menampilkan isi dokumen dalam format JSON
+        }
 
         //Mengubah isi data (value) pada dokumen
         // Misalnya ubah usia Andi menjadi 25
         // ============================
-//        collection.updateOne(
-//            Filters.eq("nama", "Agung"),             // Filter: cari dokumen dengan nama Agung
-//            Updates.set("usia", 26)                 // Update: ubah field usia menjadi 26
-//        );
+        collection.updateOne(
+            Filters.eq("nama", "Agung"),             // Filter: cari dokumen dengan nama Agung
+            Updates.set("usia", 26)                 // Update: ubah field usia menjadi 26
+        );
 
         //Menghapus dokumen dari koleksi
         // Misalnya hapus dokumen dengan nama "Idris"
         // ============================
-//        collection.deleteOne(Filters.eq("nama", "Idris")); // Menghapus satu dokumen dengan nama "Idris"
+        collection.deleteOne(Filters.eq("nama", "Idris")); // Menghapus satu dokumen dengan nama "Idris"
 
         //Menemukan data berdasarkan kata kunci (key)
         // Misalnya cari dokumen yang punya key 'hobi'
         // ============================
-//        System.out.println("=== Dokumen dengan key 'hobi' ===");
-//        FindIterable<Document> dokumenDenganHobi = collection.find(Filters.exists("hobi")); // Filter: hanya dokumen yang memiliki key 'hobi'
-//        for (Document doc : dokumenDenganHobi) {
-//            System.out.println(doc.toJson()); // Tampilkan hasilnya
-//        }
+        System.out.println("=== Dokumen dengan key 'hobi' ===");
+        FindIterable<Document> dokumenDenganHobi = collection.find(Filters.exists("hobi")); // Filter: hanya dokumen yang memiliki key 'hobi'
+        for (Document doc : dokumenDenganHobi) {
+            System.out.println(doc.toJson()); // Tampilkan hasilnya
+        }
 
         // Menutup koneksi setelah semua operasi selesai
         mongoClient.close();
